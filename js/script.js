@@ -11,14 +11,14 @@ let guessCount = 1;
 let resetButton;
 
 function checkGuess() {
-	let userGuess = guessField.value;
+	let userGuess = Number(guessField.value);
 	if (guessCount === 1) {
 		guesses.textContent = 'Previous guesses: ';
 	}
 	guesses.textContent += userGuess + ' '; // зачем пустая строка? Ответ: пробел
 
 	if (userGuess === randomNumber) {
-		lastResult.textContent = 'Congratulations! You got it right!';
+		lastResult.textContent = 'Congratulations!!!! You got it right!';
     	lastResult.style.backgroundColor = 'green';
     	lowOrHi.textContent = '';
     	setGameOver(); // что такое set
